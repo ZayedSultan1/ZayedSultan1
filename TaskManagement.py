@@ -22,11 +22,13 @@ def mark_task():
 		print(incompleted_tasks)
 	'''
 	#second way : ternary way : print out list of dictionaries
-	incompleted_tasks=[ task for task in tasks if task["status"]==False]# task before for statement will be added to the same square brackets if condition inside for statement achieved
-	print(incompleted_tasks)
+	incompleted_tasks=[ task for task in tasks if task["status"]==False]# task before for statement will be added to the same square brackets if condition inside ifstatement achieved
+	
 
-			
-	#show them to the user
+    #if not incompleted_tasks:
+	if len(incompleted_tasks)==0:
+		print("no tasks to mark as completed")
+		return
 	
 	for i , task in enumerate(incompleted_tasks):
 		print(f"{i+1}_ {task['task']}")
@@ -36,13 +38,23 @@ def mark_task():
 	#get the task from the user
 	task_number=int(input("Enter incompleted task to complete"))
 	#mark task as completed
-	tasks[task_number - 1]["status"]==True
+	incompleted_tasks[task_number - 1]["status"]=True
 	
 	#print a message to the user
-	print(tasks)
+	print("task marked completed")
 	
 def view_tasks():
-	...
+	if not tasks:
+		print("no tasks to view")
+		return
+	
+	for i , task in enumerate(tasks):
+		if task["status"]:
+			status='✅'
+		else:
+			status='❌'
+			
+		print(f"{i+1}_ {task['task']} {status}")
 
 
 tasks=[]
