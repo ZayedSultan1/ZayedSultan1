@@ -2,7 +2,7 @@
 - 👀 I’m interested in programming and data structures.
 - 🌱 I’m currently learning programming. 
 - 💞️ I’m looking to collaborate on learning new and useful skills.
-- 📫 How to reach me aaa735219310@gmail.com 
+- 📫 How to reach me aa735219310@gmail.com 
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 
